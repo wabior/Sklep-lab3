@@ -1,0 +1,18 @@
+{% extends 'produkty/baza.html' %}
+
+{% block kategoria %}
+
+<h3>Kategoria:&nbsp &nbsp {{ kat }}</h3>
+
+{% if kategoria_widok %}
+    <ul>
+    {% for prod in kategoria_widok %}
+
+        <li><a href="{% url 'detail' prod.id %}">{{ prod.nazwa }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No products are available.</p>
+{% endif %}
+
+{% endblock %}

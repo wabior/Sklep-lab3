@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Sklep internetowy Jaro z Polski</h1>
+Kategoria: {{ kat }}
+<br />
+{% if kategoria_widok %}
+    <ul>
+    {% for prod in kategoria_widok %}
+
+        <li><a href="{% url 'detail' prod.id %}">{{ prod.nazwa }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No products are available.</p>
+{% endif %}
+</body>
+</html>

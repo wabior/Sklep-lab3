@@ -1,0 +1,17 @@
+{% extends 'produkty/baza.html' %}
+
+{% block contents %}
+
+<div id="container1">
+
+    <div id = main>
+            {% load static %}
+        <h2>Witaj w sklepie z częściami komputerowymi.</h2>
+            <img class="rama" width="200"  src="{% static "/produkty/logo.png" %}" alt="My logo">
+            <img class="rama" width="200"  src="{% static "/produkty/logitech_ps2_mouse.jpg" %}" alt="My logo">
+            <img class="rama" width="200"  src="{% static "/produkty/Rareon_r7_250x.png" %}" alt="My logo">
+            <img class="rama" width="200"  src="{% static "/produkty/toshiba_p300.jpg" %}" alt="My logo">
+    </div>
+</div>
+
+{% endblock contents %}
